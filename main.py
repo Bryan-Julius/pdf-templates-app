@@ -8,6 +8,8 @@ df = pd.read_csv("topics.csv")
 
 for index, row in df.iterrows():
     pdf.add_page()
+    for x in range(30,280,10):
+        pdf.line(10, x, 200, x)
 
     # Set header
     pdf.set_font(family="Times", style="B", size=12)
@@ -27,6 +29,8 @@ for index, row in df.iterrows():
 
     for i in range(row["Pages"] - 1):
         pdf.add_page()
+        for x in range(30, 280, 10):
+            pdf.line(10, x, 200, x)
 
         # Set the footer
         pdf.ln(277)
