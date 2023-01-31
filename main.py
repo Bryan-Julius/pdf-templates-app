@@ -24,9 +24,6 @@ for index, row in df.iterrows():
     pdf.set_text_color(128, 128, 128)
     pdf.cell(w=0, h=10, txt=row["Topic"], align="R")
 
-
-
-
     for i in range(row["Pages"] - 1):
         pdf.add_page()
         for x in range(30, 280, 10):
